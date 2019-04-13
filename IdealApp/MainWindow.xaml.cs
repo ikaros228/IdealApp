@@ -20,9 +20,34 @@ namespace IdealApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string Name { get; set; }
+        public string Password { get; set; }
+
+
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen; //spawn window in center
+            Name = "Ricardo";
+            Password = "kek2009";
+            SetDefaultSettings();
+        }
+
+        private void Start_BTN_Click(object sender, RoutedEventArgs e)
+        {
+            if (Name == Name_TB.Text && Password == Password_TB.Text)
+            {
+                LobbyWindow lw = new LobbyWindow();
+                lw.Show();
+                this.Close();
+            }
+
+        }
+
+        private void SetDefaultSettings()
+        {
+            Name_TB.Text = Name;
+            Password_TB.Text = Password;
         }
     }
 }

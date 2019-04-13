@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IdealApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Hello!" Height="500" Width="800" ResizeMode="CanMinimize">
+    <Grid Background="#FFA3C4FF">
+        <StackPanel Height="100" Margin="235,184,235,185">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Margin" Value="0,10,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBox x:Name="Name_TB" TextWrapping="Wrap" Text="Enter your name here" FontSize="20" FontFamily="Calibri" Background="#FFA3C4FF" BorderBrush="#FF0040FF" SelectionBrush="#FF00FF8C"/>
+            <TextBox x:Name="Password_TB" TextWrapping="Wrap" Text="Enter your password here" FontSize="20" FontFamily="Calibri" Background="#FFA3C4FF" BorderBrush="#FF0040FF" SelectionBrush="#FF00FF8C"/>
+        </StackPanel>
+        <Label x:Name="Welcome_L" Content="Hello!" Margin="345,66,0,0" FontSize="36" Height="58" VerticalAlignment="Top" HorizontalAlignment="Left" Width="103"/>
+        <Button x:Name="Start_BTN" Content="Go!" HorizontalAlignment="Left" Margin="345,285,0,0" VerticalAlignment="Top" Width="103" Background="#FFA3C4FF" BorderBrush="#FF0040FF" FontSize="36" Foreground="Black" FontFamily="Calibri" Click="Start_BTN_Click"/>
     </Grid>
 </Window>
